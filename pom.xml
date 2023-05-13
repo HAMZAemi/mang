@@ -119,7 +119,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>com.luv2code.Inventory Management.InventoryManagementApplication</mainClass>
+							<mainClass>com.luv2code.InventoryManagement.InventoryManagementApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
