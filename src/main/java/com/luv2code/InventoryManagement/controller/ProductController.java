@@ -19,7 +19,7 @@ import com.luv2code.InventoryManagement.service.ProductService;
 @RequestMapping("/products")
 public class ProductController {
 	
-	
+	//ggggggggggggg
 	@Autowired
 	private ProductService productService;
 	
