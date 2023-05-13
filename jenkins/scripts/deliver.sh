@@ -5,7 +5,7 @@ echo 'into the local Maven repository, which will ultimately be stored in'
 echo 'Jenkins''s local Maven repository (and the "maven-repository" Docker data'
 echo 'volume).'
 set -x
-mvn install:install help:evaluate -Dexpression=project.name
+mvn install
 set +x
 
 echo 'The following complex command extracts the value of the <name/> element'
@@ -23,4 +23,4 @@ set +x
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
-java -jar target/${NAME}-${VERSION}.war
+java -jar target/${NAME}-${VERSION}.jar
