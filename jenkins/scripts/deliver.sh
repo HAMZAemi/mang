@@ -11,7 +11,8 @@ set +x
 echo 'The following complex command extracts the value of the <name/> element'
 echo 'within <project/> of your Java/Maven project''s "pom.xml" file.'
 set -x
-NAME=`mvn help:evaluate -Dexpression=project.name | grep "^[^\[]"`
+NAME=$(basename $(find target -name "*.jar"))
+NAME=${NAME%.*}
 set +x
 
 echo 'The following complex command behaves similarly to the previous one but'
