@@ -20,7 +20,6 @@ import com.luv2code.InventoryManagement.service.ProductService;
 public class ProductController {
 	
 	
-	// need to inject the Product dao
 	@Autowired
 	private ProductService productService;
 	
