@@ -20,7 +20,6 @@ import com.luv2code.InventoryManagement.service.CustomerService;
 @RequestMapping("/CRM")
 public class CustomerController {
 
-	// need to inject the customer dao
 	@Autowired
 	private CustomerService customerService;
 	
@@ -53,7 +52,7 @@ public class CustomerController {
 	public String showFormForAdd(Model theModel) {
 		
 		CustomerDTO theCustomer = new CustomerDTO();
-		//empty customer^
+	
 		theModel.addAttribute("customer", theCustomer);
 		
 		return "customer-form";
