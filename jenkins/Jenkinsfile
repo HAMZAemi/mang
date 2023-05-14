@@ -19,12 +19,8 @@ pipeline {
         }
         stage('Deliver') {
             steps { 
-                  retry(3) {
-                    bat 'echo "Deploying"'
-                }
-                timeout(time: 3, unit: 'SECONDS') {
-                    bat 'ping -n 10 127.0.0.1'
-                }
+                 sh "chmod +x -R ${env.WORKSPACE}"
+                sh './jenkins/scripts/deliver.sh'
             
             }
         }
