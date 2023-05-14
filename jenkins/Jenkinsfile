@@ -19,9 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps { 
-                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './jenkins/scripts/deliver.sh'
-            
+                bat "mvn jar:jar deploy:deploy"
             }
         }
     }
