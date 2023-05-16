@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deliver') {
             steps { 
-                bat "mvn jar:jar deploy:deploy"
+               sh "mvn package"
             }
         }
     }
